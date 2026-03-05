@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Special Potato</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#ffe6f0;
+text-align:center;
+padding:40px;
+}
+
+button{
+padding:12px 20px;
+margin:10px;
+font-size:16px;
+border:none;
+border-radius:10px;
+background:#ff66a3;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff3385;
+}
+
+#text{
+margin-top:30px;
+font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>HI My Cutie Potato 💖</h1>
+
+<p>Options for the mood today are:</p>
+
+<button onclick="moodAnswer('happy')">Happy</button>
+<button onclick="moodAnswer('sad')">Sad</button>
+<button onclick="moodAnswer('idk')">I don't know</button>
+
+<div id="text"></div>
+
+<script>
+
+function moodAnswer(mood){
+
+let text = document.getElementById("text")
+
+if(mood === "happy"){
+
+text.innerHTML = `
+<p>That's good, which means we can proceed to the next.</p>
+
+<p>So would you like for us to have dinner today at 8pm?</p>
+
+<button onclick="dinner()">Rice and stew</button>
+<button onclick="dinner()">Bake</button>
+<button onclick="dinner()">Swallow</button>
+`
+
+}
+
+else if(mood === "sad"){
+
+text.innerHTML = `
+<p>Well Bola is about to fix that.</p>
+
+<p>I know Bola has been acting quite off lately and you are not the reason.</p>
+
+<p>So since she has not been your peace lately, she'd like to make it up to you.</p>
+
+<p>So would you like for us to have dinner today at 8pm?</p>
+
+<button onclick="dinner()">Rice and stew</button>
+<button onclick="dinner()">Bake</button>
+<button onclick="dinner()">Swallow</button>
+`
+
+}
+
+else{
+
+text.innerHTML = `
+<p>Well the truth is we never know how we actually feel so that's valid.</p>
+
+<p>So would you like for us to have dinner today at 8pm?</p>
+
+<button onclick="dinner()">Rice and stew</button>
+<button onclick="dinner()">Bake</button>
+<button onclick="dinner()">Swallow</button>
+`
+
+}
+
+}
+
+function dinner(){
+
+let text = document.getElementById("text")
+
+text.innerHTML = `
+<p>Okay that's fine My Love whatever you want.</p>
+
+<p>Bye My Love, I'll call you by 6:40pm ❤️</p>
+`
+
+}
+
+</script>
+
+</body>
+</html>
